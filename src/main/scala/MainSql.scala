@@ -3,9 +3,10 @@ package com.hatebit
 import java.sql.DriverManager;
 import java.sql.Connection;
 
-//https://www.elephantsql.com/docs/java.html
+// https://www.elephantsql.com/docs/java.html
 
 object MainSql {
+  // args(0) should contain password
   def main(args: Array[String]): Unit = {
     println("Hello world!")
 
