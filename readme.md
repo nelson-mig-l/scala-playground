@@ -45,3 +45,6 @@ libraryDependencies += "org.apache.spark" %% "spark-mllib" % "3.3.1"
  * on scala 2.13 you cannot `Random.shuffle` a `Range`. Use `Range.toList` and then shuffle it.
  * printing arrays doesnt work as in REPL. You need to use the `mkString` method. e.g(`array.mkString("Array(", ", ", ")")`).
 
+## Chapter 5 - Scala and Spark DataFrames
+
+See `src/main/scala/MainSparkDataFrame.scala`
