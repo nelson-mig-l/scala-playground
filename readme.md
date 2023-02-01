@@ -1,14 +1,16 @@
 # Scala playground
 
+## Getting started
+
 [LinkedIn Learning - Scala Essential Training for Data Science](https://www.linkedin.com/learning/scala-essential-training-for-data-science)
 
-## Chapter 1 - Introduction to scala
+### Chapter 1 - Introduction to scala
 
 Entirely done on scala REPL.
 
-## Chapter 2 - Parallel Processing in Scala
+### Chapter 2 - Parallel Processing in Scala
 
-See `src/main/scala/MainPar.scala`
+See `src/main/scala/linkedin/MainPar.scala`
 
 Parallel collections have been moved in Scala 2.13 to separate module `scala/scala-parallel-collection`.
 
@@ -18,9 +20,9 @@ libraryDependencies += "org.scala-lang.modules" %% "scala-parallel-collections" 
 
 **Note:** the double percent "`%%`" indicates that the dependency will include the project scala version. 
 
-## Chapter 3 - Using SQL in Scala
+### Chapter 3 - Using SQL in Scala
 
-See `src/main/scala/MainSql.scala`
+See `src/main/scala/linkedin/MainSql.scala`
 
 Instead of installing Postgresql database was hosted at [ElephantSQL](https://www.elephantsql.com/)
 
@@ -30,9 +32,9 @@ When running `MainSql.scala` remember to provide the password as a command line 
 libraryDependencies += "org.postgresql" % "postgresql" % "42.5.1"
 ```
 
-## Chapter 4 - Scala and Spark RDDs
+### Chapter 4 - Scala and Spark RDDs
 
-See `src/main/scala/MainSpark.scala`
+See `src/main/scala/linkedin/MainSpark.scala`
 
 No need to install spark. Just add the following dependencies.
 
@@ -45,6 +47,17 @@ libraryDependencies += "org.apache.spark" %% "spark-mllib" % "3.3.1"
  * on scala 2.13 you cannot `Random.shuffle` a `Range`. Use `Range.toList` and then shuffle it.
  * printing arrays doesnt work as in REPL. You need to use the `mkString` method. e.g(`array.mkString("Array(", ", ", ")")`).
 
-## Chapter 5 - Scala and Spark DataFrames
+### Chapter 5 - Scala and Spark DataFrames
 
-See `src/main/scala/MainSparkDataFrame.scala`
+See `src/main/scala/linkedin/MainSparkDataFrame.scala`
+
+## How it works
+
+The theory: [Udemy - Spark Starter Kit](https://www.udemy.com/course/sparkstarterkit/)
+
+## Hands on ML
+
+[Titanic - Machine Learning from Disaster](https://www.kaggle.com/c/titanic) 
+
+`src/main/scala/titanic/MainTitanic.scala`
+

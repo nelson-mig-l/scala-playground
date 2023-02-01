@@ -1,8 +1,9 @@
 package com.hatebit
+package linkedin
 
 import org.apache.spark.SparkContext
-import org.apache.spark.sql.SparkSession
 import org.apache.spark.mllib.stat.Statistics
+import org.apache.spark.sql.SparkSession
 
 import scala.util.Random
 
@@ -34,10 +35,11 @@ object MainSpark {
     val bigBool = bigPRng2.map(div)
     println(bigBool.take(25).mkString("Array(", ", ", ")"))
 
-    val republic = sc.textFile("src/main/resources/pg1497.txt")
+    val republic = sc.textFile("data/pg1497.txt")
     republic.take(25).foreach(println)
     val linesWithSocrates = republic.filter(line => line.contains("Socrates"))
     linesWithSocrates.take(10).foreach(println)
+    println(linesWithSocrates.toDebugString)
 
     val x = bigPRng2.takeSample(true, 1000)
     println(x.length)

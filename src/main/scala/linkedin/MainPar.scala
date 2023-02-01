@@ -1,4 +1,5 @@
 package com.hatebit
+package linkedin
 
 import scala.collection.parallel.CollectionConverters.ImmutableIterableIsParallelizable
 

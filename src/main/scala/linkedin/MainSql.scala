@@ -1,7 +1,7 @@
 package com.hatebit
+package linkedin
 
-import java.sql.DriverManager;
-import java.sql.Connection;
+import java.sql.{Connection, DriverManager};
 
 // https://www.elephantsql.com/docs/java.html
 

@@ -1,4 +1,5 @@
 package com.hatebit
+package linkedin
 
 import org.apache.spark.sql.SparkSession
 
@@ -11,17 +12,17 @@ object MainSparkDataFrame {
       .getOrCreate();
     spark.sparkContext.setLogLevel("ERROR")
 
-    val dfEmps = spark.read.option("header", "true").csv("src/main/resources/employee.txt")
+    val dfEmps = spark.read.option("header", "true").csv("data/employee.txt")
     println(dfEmps)
     println(dfEmps.take(10).mkString("Array(", ", ", ")"))
     dfEmps.printSchema()
     dfEmps.show()
 
-    val dfCr = spark.read.option("header", "true").csv("src/main/resources/country_region.txt")
+    val dfCr = spark.read.option("header", "true").csv("data/country_region.txt")
     dfCr.show()
     println(dfCr.collect().mkString("Array(", ", ", ")"))
 
-    val dfDepDiv = spark.read.option("header", "true").csv("src/main/resources/dept_div.txt")
+    val dfDepDiv = spark.read.option("header", "true").csv("data/dept_div.txt")
     dfDepDiv.show()
 
     dfEmps.createOrReplaceTempView("employees")
@@ -40,7 +41,7 @@ object MainSparkDataFrame {
     println(dfJoin.columns.mkString("Array(", ", ", ")"))
     dfJoin.show()
 
-    val dfJsonDepDiv = spark.read.json("src/main/resources/dept_div.json")
+    val dfJsonDepDiv = spark.read.json("data/dept_div.json")
     dfJsonDepDiv.show()
   }
 
